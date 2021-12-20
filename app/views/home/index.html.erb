@@ -1,5 +1,15 @@
+<div class = 'jumbotron'>
+    <h1>Tigse</h1>
+    <p>the art of buddhist proportions</p>
 
-<h1>Tigse</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+    <% if user_signed_in? %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+    <%= link_to "Edit Profile", edit_user_registration_path,  class:"btn btn-default" %>
+    <%= link_to "List Pins", pins_path, class: "btn btn-default" %>
+    <% else %>
 
+    <%= link_to "Login",  new_user_session_url, class:"btn btn-primary" %>
+    <%= link_to "Join",  new_user_registration_url, class:"btn btn-default" %>
 
+<% end %>
+</div>
