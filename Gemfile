@@ -22,9 +22,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+#Use Active Storage variant
+gem 'image_processing', '~> 1.2'
 gem 'devise'
+gem 'active_storage_validations'
+gem 'mini_magick', '~> 4.11'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-turbolinks'
 
 
 # Reduces boot times through caching; required in config/boot.rb

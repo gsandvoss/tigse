@@ -26,7 +26,7 @@ class PinsController < ApplicationController
 
   # POST /pins or /pins.json
   def create
-    @pin = current_user.pins.build(pin_params)
+    @pin = current_user.pins.build(pin_params) 
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
@@ -57,7 +57,7 @@ class PinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image, uploads: [])
     end
 
     def correct_user
